@@ -16,6 +16,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'autoprefixer-rails'
+gem 'sprockets', '~> 3.7', '>= 3.7.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
 
 
 group :development, :test do
