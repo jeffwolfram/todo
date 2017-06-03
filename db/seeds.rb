@@ -23,18 +23,18 @@ require 'random_data'
   )
 end
 lists = List.all
-#creat items
-# 50.times do
-#
-#   item = Item.create!(
-#   user: users.sample,
-#   list: lists.sample,
-#   body: RandomData.random_sentence
-#   )
-#   item.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
-#   rand(1..5).times {post.votes.create!(value: [-1, 1].sample, user: users.sample) }
-# end
-# items = Item.all
+# create items
+50.times do
+
+  item = Item.create!(
+
+  list: lists.sample,
+  body: RandomData.random_sentence
+  )
+  item.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
+
+end
+items = Item.all
 
 
 
@@ -48,6 +48,6 @@ lists = List.all
 
 
 puts "Seed finished"
- puts "#{List.count} topics created"
+ puts "#{List.count} lists created"
  puts "#{User.count} users created"
-puts "#{Item.count} posts created"
+puts "#{Item.count} items created"

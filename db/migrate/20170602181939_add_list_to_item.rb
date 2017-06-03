@@ -1,6 +1,6 @@
 class AddListToItem < ActiveRecord::Migration[5.1]
   def change
-    add_column :items, :List_id, :integer
-    add_index :items, :List_id
+    add_column :items, :list_id, :integer
+    add_index :items, :list_id
   end
 end
