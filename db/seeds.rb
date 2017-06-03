@@ -5,3 +5,49 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'random_data'
+# Create Users
+# 5.times do
+#   User.create!(
+# # #3
+#   name:     RandomData.random_name,
+#   email:    RandomData.random_email,
+#   password: RandomData.random_sentence
+#   )
+# end
+# users = User.all
+15.times do
+  List.create!(
+  name: RandomData.random_sentence,
+  description: RandomData.random_paragraph
+  )
+end
+lists = List.all
+#creat items
+# 50.times do
+#
+#   item = Item.create!(
+#   user: users.sample,
+#   list: lists.sample,
+#   body: RandomData.random_sentence
+#   )
+#   item.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
+#   rand(1..5).times {post.votes.create!(value: [-1, 1].sample, user: users.sample) }
+# end
+# items = Item.all
+
+
+
+#create an admin user
+# admin = User.create!(
+# name: 'Admin User',
+# email: 'admin@example.com',
+# password: 'helloworld',
+# role: 'admin'
+# )
+
+
+puts "Seed finished"
+ puts "#{List.count} topics created"
+ puts "#{User.count} users created"
+puts "#{Item.count} posts created"
