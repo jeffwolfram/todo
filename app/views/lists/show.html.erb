@@ -16,12 +16,14 @@
              <th>Date Added</th>
              <th>Item</th>
              <th>Finished</th>
+             <th></th>
            </tr>
          <% @list.items.each do |item| %>
          <tr>
            <td><%= item.created_at.strftime('%B %d, %Y') %></td>
        <td><%= item.body %></td>
        <td><input type="checkbox"></td>
+       <td><%= link_to "delete", list_item_path(@list, item), method: :delete %></td>
      </tr>
            <% end %>
          </table>

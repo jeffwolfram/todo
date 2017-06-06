@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 
     if @item.save
       flash[:notice] = "Item was save correctly"
-      redirect_to [@list]
+      redirect_to new_list_item_path(@list)
     else
       flash.now[:alert] = "There was a problem saving list item. Please try again."
       render :new
@@ -38,8 +38,9 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    if @item.destroy
-      flash[:notice] = "\"#{@item.title}\" was deleted successfully"
+    if @item.delete
+      flash[:notice] = "\"#{@item.body}\" was deleted successfully"
+      redirect_to @item.list
     else
       flash[:alert] = "There was a problem deleting your item. Please try again"
       redirect_to @item.list

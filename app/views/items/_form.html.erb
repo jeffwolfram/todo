@@ -1,24 +1,22 @@
 <%= form_for [@list, @item] do |f| %>
   <% if item.errors.any? %>
-
     <div class="alert alert-danger">
-
       <h4><%= pluralize(item.errors.count, "error") %>.</h4>
       <ul>
         <% item.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
+
         <% end %>
       </ul>
     </div>
   <% end %>
-
-
-
   <%= form_group_tag(item.errors[:body]) do %>
-    <%= f.label :body %>
-    <%= f.text_field :body, rows: 8, class: 'form-control', placeholder: "Enter Todo Item" %>
+    <%= f.label :body  %>
+    <%= f.text_field :body, rows: 8, :autofocus => true, class: 'form-control', placeholder: "Enter Todo Item" %>
+
   <% end %>
   <div class="form-group">
     <%= f.submit "Save", class: 'btn btn-success' %>
+    <button>done</button>
   </div>
 <% end %>
