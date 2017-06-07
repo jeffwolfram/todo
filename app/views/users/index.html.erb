@@ -2,13 +2,13 @@
   <div class="media-body">
 <table class="table table-striped">
     <tr>
-      <th>name</th>
+      <th>Id</th>
       <th>email</th>
       <th>role</th>
     </tr>
     <% @user.each do |user| %>
     <tr>
-    <td><%=  user.name %></td>
+    <td><%=  user.id %></td>
     <td><%=  user.email %></td>
     <td><%= user.role %></td>
 
