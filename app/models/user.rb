@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-# has_many :lists, dependent: :destroy
+ has_many :lists
 
   before_save {self.email = email.downcase if email.present?}
 
